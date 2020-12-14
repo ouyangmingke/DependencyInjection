@@ -14,6 +14,10 @@ namespace Dependency_Injection
         private string _Name;
 
         public string Name { get => _Name; set => _Name = value; }
+
+        public abstract void Zhihu();
+        public abstract void Wangzhe();
+        public abstract void Hongbao();
     }
 
 
@@ -26,19 +30,45 @@ namespace Dependency_Injection
         {
             Name = name;
         }
-        public void Zhihu()
+
+        public override void Zhihu()
         {
             Console.WriteLine("逛知乎 " + Name);
         }
-        public void Wangzhe()
+
+        public override void Wangzhe()
         {
             Console.WriteLine("玩农药 " + Name);
         }
-        public void Hongbao()
+        public override void Hongbao()
         {
             Console.WriteLine("抢红包 " + Name);
         }
+    }
 
+    /// <summary>
+    /// IphoneX 继承自 Phone
+    /// </summary>
+    public class IphoneX : Phone
+    {
+        public IphoneX(string name)
+        {
+            Name = name;
+        }
+
+        public override void Zhihu()
+        {
+            Console.WriteLine("逛知乎 " + Name);
+        }
+
+        public override void Wangzhe()
+        {
+            Console.WriteLine("玩农药 " + Name);
+        }
+        public override void Hongbao()
+        {
+            Console.WriteLine("抢红包 " + Name);
+        }
     }
 
 }
