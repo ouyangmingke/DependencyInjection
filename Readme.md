@@ -1,0 +1,1 @@
+### [ASP.NET Core依赖注入高级玩法——如何注入多个服务实现类](https://www.cnblogs.com/tcjiaan/p/8732848.html)
